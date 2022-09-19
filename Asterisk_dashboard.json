@@ -1,4 +1,14 @@
 {
+  "__inputs": [
+    {
+      "name": "DS_PROMETHEUS",
+      "label": "Prometheus",
+      "description": "this dashboard Imports Data directly from prometheus datasource",
+      "type": "datasource",
+      "pluginId": "prometheus",
+      "pluginName": "Prometheus"
+    }
+  ],
   "annotations": {
     "list": [
       {
@@ -42,10 +52,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -86,13 +93,10 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "asterisk_core_properties",
@@ -106,10 +110,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -150,13 +151,10 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "asterisk_core_properties",
@@ -170,10 +168,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -230,13 +225,10 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "exemplar": false,
           "expr": "asterisk_core_uptime_seconds",
           "instant": true,
@@ -249,10 +241,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -293,13 +282,10 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "expr": "asterisk_core_properties",
           "legendFormat": "{{instance}}",
@@ -311,10 +297,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -355,13 +338,10 @@
         "text": {},
         "textMode": "name"
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "asterisk_core_properties",
@@ -375,10 +355,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -431,21 +408,14 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
-          "editorMode": "code",
-          "exemplar": false,
+          "datasource": "${DS_PROMETHEUS}",
           "expr": "avg(asterisk_endpoints_state-1)*100",
           "format": "time_series",
           "hide": false,
-          "instant": true,
           "intervalFactor": 1,
-          "range": false,
           "refId": "A",
           "step": 240
         }
@@ -454,10 +424,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -496,13 +463,10 @@
         "showThresholdMarkers": true,
         "text": {}
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "exemplar": false,
           "expr": "asterisk_endpoints_count",
@@ -518,10 +482,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -556,13 +517,10 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "exemplar": false,
           "expr": "asterisk_calls_count",
@@ -578,10 +536,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -616,13 +571,10 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "exemplar": false,
           "expr": "asterisk_channels_count",
@@ -638,10 +590,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "mappings": [],
@@ -676,13 +625,10 @@
         "showThresholdLabels": false,
         "showThresholdMarkers": true
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "exemplar": false,
           "expr": "asterisk_calls_sum",
@@ -698,10 +644,7 @@
       "type": "gauge"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -750,13 +693,10 @@
         "text": {},
         "textMode": "value"
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "expr": "asterisk_core_last_reload_seconds",
           "legendFormat": "__auto",
@@ -768,10 +708,7 @@
       "type": "stat"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "description": "",
       "fieldConfig": {
         "defaults": {
@@ -826,9 +763,8 @@
       "options": {
         "alignValue": "left",
         "legend": {
-          "displayMode": "list",
-          "placement": "bottom",
-          "showLegend": false
+          "displayMode": "hidden",
+          "placement": "bottom"
         },
         "mergeValues": true,
         "rowHeight": 0.9,
@@ -840,10 +776,7 @@
       },
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "${source}"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "exemplar": true,
           "expr": "up{id=\"Asterisk\"}",
           "interval": "",
@@ -869,10 +802,7 @@
       "type": "row"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1050,13 +980,10 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "asterisk_channels_state",
@@ -1067,10 +994,7 @@
           "refId": "A"
         },
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "asterisk_channels_duration_seconds",
@@ -1150,10 +1074,7 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -1313,13 +1234,10 @@
         "showHeader": true,
         "sortBy": []
       },
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "asterisk_endpoints_state",
@@ -1369,18 +1287,13 @@
       "type": "table"
     },
     {
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "color": {
             "mode": "thresholds"
           },
           "custom": {
-            "axisCenteredZero": false,
-            "axisColorMode": "text",
             "axisLabel": "Длительность разговора",
             "axisPlacement": "auto",
             "axisSoftMin": 100,
@@ -1424,9 +1337,8 @@
         "groupWidth": 0.7,
         "legend": {
           "calcs": [],
-          "displayMode": "list",
-          "placement": "right",
-          "showLegend": false
+          "displayMode": "hidden",
+          "placement": "right"
         },
         "orientation": "auto",
         "showValue": "auto",
@@ -1443,10 +1355,7 @@
       "pluginVersion": "9.0.2",
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "exemplar": false,
           "expr": "label_replace(asterisk_channels_duration_seconds, \"name\", \"$1\", \"name\", \"(.*)-.*\")",
@@ -1479,10 +1388,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -1520,7 +1426,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -1530,10 +1436,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "code",
           "expr": "asterisk_bridges_count",
           "legendFormat": "__auto",
@@ -1593,10 +1496,7 @@
       "bars": false,
       "dashLength": 10,
       "dashes": false,
-      "datasource": {
-        "type": "prometheus",
-        "uid": "dVZlVZ6nk"
-      },
+      "datasource": "${DS_PROMETHEUS}",
       "fieldConfig": {
         "defaults": {
           "links": []
@@ -1633,7 +1533,7 @@
       },
       "paceLength": 10,
       "percentage": false,
-      "pluginVersion": "9.1.1",
+      "pluginVersion": "9.0.2",
       "pointradius": 5,
       "points": false,
       "renderer": "flot",
@@ -1649,10 +1549,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "datasource": {
-            "type": "prometheus",
-            "uid": "dVZlVZ6nk"
-          },
+          "datasource": "${DS_PROMETHEUS}",
           "editorMode": "builder",
           "expr": "asterisk_channels_count",
           "legendFormat": "__auto",
@@ -1707,7 +1604,7 @@
     }
   ],
   "refresh": "5s",
-  "schemaVersion": 37,
+  "schemaVersion": 36,
   "style": "dark",
   "tags": [
     "Asterisk"
@@ -1716,13 +1613,13 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-7d",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Asterisk",
   "uid": "cGMQBLmVk",
-  "version": 110,
+  "version": 112,
   "weekStart": ""
 }
